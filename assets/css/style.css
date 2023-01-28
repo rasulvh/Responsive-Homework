@@ -1,112 +1,154 @@
-* {
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    margin: 2rem;
-    color: #414b56;
-  }
-  
-  .main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    overflow: hidden;
-    box-shadow: 0px 2px 20px #d7dfe2;
-    background: white;
-    border-radius: 8px;
-    position: relative;
-    width: 350px;
-    margin: 16px;
-    transition: 0.25s all ease-in-out;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 2px 40px #d7dfe2;
-  }
-  
-  .img {
-    position: absolute;
-    object-fit: cover;
-    height: 14rem;
+#header .head h1{
+  color: rgb(75, 75, 250);
+  text-align: center;
+}
+
+#header .head{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  height: 60px;
+}
+
+#cards{
+  padding-top: 3%;
+}
+
+#cards .card {
+  width: 100%;
+  height: 550px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: 0.3s;
+}
+
+#cards .card:hover{
+  transform: scale(1.1);
+}
+
+#cards .card .head {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  border-radius: inherit;
+}
+
+#cards .card .head .type-1 {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  background-color: rgb(239, 37, 122);
+  top: 30px;
+  width: 70px;
+  border-top-right-radius: 10px;
+  display: flex;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+#cards .card .head .type-2{
+  position: absolute;
+  color: white;
+  z-index: 2;
+  background-color: blueviolet;
+  top: 30px;
+  width: 70px;
+  border-top-right-radius: 10px;
+  display: flex;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+#cards .card .head .type-3 {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  background-color: orange;
+  top: 30px;
+  width: 70px;
+  border-top-right-radius: 10px;
+  display: flex;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+#cards .card .head img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+#cards .card .content{
+  height: 300px;
+  width: 100%;
+}
+
+#cards .card .content .hashtags{
+  color: rgb(153,193,204);
+}
+
+#cards .card .content h1{
+  font-size: 32px;
+}
+
+#cards .card .content .description{
+  color: rgb(125,124,128);
+}
+
+#cards .card .content .profile{
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+}
+
+#cards .card .content .profile img{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+#cards .card .content .profile .info{
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#cards .card .content .profile .info .info-items{
+  height: 49%;
+}
+
+#cards .card .content .profile .info .info-items .name{
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+#cards .card .content .profile .info .info-items .followers{
+  font-size: 13px;
+  line-height: 0px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  #cards .card-1 .content .profile{
     width: 100%;
-  }
-  
-  .category-tag {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: white;
-    background: red;
-    padding: 0.5rem 1.3rem 0.5rem 1rem;
-    text-transform: uppercase;
-    position: absolute;
-    z-index: 1;
-    top: 1rem;
-    border-radius: 0 2rem 2rem 0;
-  }
-  
-  .popular {
-    background: #ef257a;
-  }
-  
-  .technology {
-    background: #651fff;
-  }
-  
-  .psychology {
-    background: #e85808;
-  }
-  
-  .card-body {
-    margin: 15rem 1rem 1rem 1rem;
-  }
-  
-  .blog-hashtag {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #4d97b2;
-  }
-  
-  .blog-title {
-    line-height: 1.5rem;
-    margin: 1rem 0 0.5rem;
-  }
-  
-  .blog-description {
-    color: #616b74;
-    font-size: 0.9rem;
-  }
-  
-  .card-profile {
     display: flex;
-    margin-top: 2rem;
-    align-items: center;
+    margin-top: 10px;
+    padding-top: 20px;
   }
-  
-  .profile-img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px){
+  #cards .card .content h1{
+    font-size: 20px;
   }
-  
-  .card-profile-info {
-    margin-left: 1rem;
-  }
-  
-  .profile-name {
-    font-size: 1rem;
-  }
-  
-  .profile-followers {
-    color: #616b74;
-    font-size: 0.9rem;
-  }
+}
